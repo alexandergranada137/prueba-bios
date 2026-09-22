@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Preparar enlace de WhatsApp automático
       const mensaje = `Hola Biosfera Inmobiliaria, deseo información y cotización del proyecto *CONDOMINIO LA MORADA* en Uchumayo.%0A%0A*Mis Datos:*%0A- Nombre: ${nombres} ${apellidos}%0A- Teléfono: ${telefono}%0A- Correo: ${email}%0A- Horario de contacto: ${horario}%0A- Interés: ${loteInteres}`;
       
-      const waUrl = `https://api.whatsapp.com/send?phone=51937289887&text=${mensaje}`;
+      const waUrl = `https://api.whatsapp.com/send?phone=51966030329\u0026text=${mensaje}`;
       
       setTimeout(() => {
         window.open(waUrl, '_blank');
