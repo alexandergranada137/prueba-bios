@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto & Agendar Visita | La Morada — Viviendas Club</title>
+  <meta name="description" content="Coordina tu visita guiada al Condominio La Morada en Uchumayo, Arequipa. Contacto directo con Biosfera Desarrollo Inmobiliario S.A.C.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-morada-hueso text-[#2E2A38] antialiased">
+  <div class="page-transition-overlay"></div>
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-header py-3.5 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <img src="assets/logo-la-morada.png" alt="La Morada Viviendas Club" class="h-14 sm:h-16 w-auto object-contain transition-transform group-hover:scale-105">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-[13.5px] font-medium text-[#2E2A38]">
+        <a href="index.html" class="hover:text-[#7B1FA2] transition-colors">Inicio</a>
+        <a href="proyecto.html" class="hover:text-[#7B1FA2] transition-colors">El Proyecto</a>
+        <a href="amenidades.html" class="hover:text-[#7B1FA2] transition-colors">Amenidades & Club</a>
+        <a href="ubicacion.html" class="hover:text-[#7B1FA2] transition-colors">Ubicación</a>
+        <a href="lotes.html" class="hover:text-[#7B1FA2] transition-colors">Lotes & Masterplan</a>
+        <a href="contacto.html" class="text-[#7B1FA2] font-bold border-b-2 border-[#7B1FA2] pb-0.5">Contacto</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://api.whatsapp.com/send?phone=51937289887&text=Hola%20Biosfera,%20deseo%20agendar%20una%20visita" target="_blank"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold hover:bg-emerald-100">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-emerald-600"></i>
+          <span>+51 937 289 887</span>
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl bg-purple-50 text-[#7B1FA2]">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- BANNER TITULAR -->
+  <section class="pt-36 pb-16 bg-morada-suave border-b border-[#EADBEE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-2xl">
+      <span class="text-[#7B1FA2] text-xs font-bold uppercase tracking-submarca">Atención Personalizada</span>
+      <h1 class="font-brand-serif text-3xl sm:text-5xl font-bold text-[#2E2A38] mt-2">
+        Agenda tu Visita Guiada
+      </h1>
+      <p class="text-[#2E2A38]/80 text-sm sm:text-base mt-3 leading-relaxed">
+        Ven a conocer las 7.5 hectáreas en Uchumayo y comprueba in situ los avances de obra, punto de agua activo y el microclima privilegiado.
+      </p>
+    </div>
+  </section>
+
+  <!-- FORMULARIO & DATOS DE CONTACTO (FONDO CLARO) -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Formulario Oficial -->
+        <div class="lg:col-span-7 bg-[#FAF5FB] p-8 sm:p-12 rounded-morada-xl border border-[#EADBEE] shadow-sm">
+          <div class="mb-8">
+            <span class="text-xs uppercase font-bold text-[#7B1FA2] tracking-wider block">Formulario de Contacto</span>
+            <h3 class="font-brand-serif text-2xl font-bold text-[#2E2A38] mt-1">¡QUIERO INFORMACIÓN AHORA!</h3>
+            <p class="text-xs sm:text-sm text-[#2E2A38]/80 mt-1">Completa los campos y un asesor inmobiliario se comunicará en tu horario preferido.</p>
+          </div>
+
+          <form id="leads-form" class="space-y-4">
+            <input type="hidden" id="input-lote-interes" value="Consulta desde página de Contacto">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="form-nombres" class="block text-xs font-bold text-[#2E2A38] mb-1">Nombres *</label>
+                <input type="text" id="form-nombres" required placeholder="Ej. Carlos" 
+                       class="w-full bg-white border border-[#EADBEE] rounded-morada px-4 py-3 text-xs sm:text-sm text-[#2E2A38] focus:outline-none focus:border-[#7B1FA2]">
+              </div>
+
+              <div>
+                <label for="form-apellidos" class="block text-xs font-bold text-[#2E2A38] mb-1">Apellidos *</label>
+                <input type="text" id="form-apellidos" required placeholder="Ej. Mendoza Paredes" 
+                       class="w-full bg-white border border-[#EADBEE] rounded-morada px-4 py-3 text-xs sm:text-sm text-[#2E2A38] focus:outline-none focus:border-[#7B1FA2]">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="form-email" class="block text-xs font-bold text-[#2E2A38] mb-1">Correo Electrónico *</label>
+                <input type="email" id="form-email" required placeholder="nombre@correo.com" 
+                       class="w-full bg-white border border-[#EADBEE] rounded-morada px-4 py-3 text-xs sm:text-sm text-[#2E2A38] focus:outline-none focus:border-[#7B1FA2]">
+              </div>
+
+              <div>
+                <label for="form-telefono" class="block text-xs font-bold text-[#2E2A38] mb-1">Teléfono / WhatsApp *</label>
+                <input type="tel" id="form-telefono" required placeholder="+51 987 654 321" 
+                       class="w-full bg-white border border-[#EADBEE] rounded-morada px-4 py-3 text-xs sm:text-sm text-[#2E2A38] focus:outline-none focus:border-[#7B1FA2]">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="form-proyecto" class="block text-xs font-bold text-[#2E2A38] mb-1">Proyecto *</label>
+                <select id="form-proyecto" class="w-full bg-white border border-[#EADBEE] rounded-morada px-4 py-3 text-xs sm:text-sm text-[#2E2A38] focus:outline-none focus:border-[#7B1FA2]">
+                  <option value="La Morada - Uchumayo" selected>La Morada — Viviendas Club</option>
+                  <option value="Casas de Campo Chiguata">Casas de Campo Chiguata</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="form-horario" class="block text-xs font-bold text-[#2E2A38] mb-1">Horario Preferido *</label>
+                <select id="form-horario" class="w-full bg-white border border-[#EADBEE] rounded-morada px-4 py-3 text-xs sm:text-sm text-[#2E2A38] focus:outline-none focus:border-[#7B1FA2]">
+                  <option value="Mañana (9am - 12pm)" selected>Mañana (9:00 am - 12:00 pm)</option>
+                  <option value="Tarde (12pm - 5pm)">Tarde (12:00 pm - 5:00 pm)</option>
+                  <option value="Noche (5pm - 8pm)">Noche (5:00 pm - 8:00 pm)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-2.5 pt-2">
+              <input type="checkbox" id="form-politicas" required class="mt-1 accent-[#7B1FA2] rounded">
+              <label for="form-politicas" class="text-xs text-[#2E2A38]/80">
+                Acepto las políticas de privacidad y el tratamiento de mis datos de contacto por Biosfera Desarrollo Inmobiliario S.A.C.
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary-morada w-full py-4 text-sm font-semibold mt-4">
+              Enviar Solicitud y Chatear por WhatsApp
+            </button>
+
+            <div id="form-success-msg" class="hidden p-3.5 rounded-morada bg-emerald-50 border border-emerald-300 text-emerald-800 text-center text-xs font-semibold">
+              ¡Gracias! Redirigiendo a WhatsApp con tu asesor inmobiliario...
+            </div>
+          </form>
+        </div>
+
+        <!-- Canales Directos y Sala de Ventas -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="p-8 rounded-morada-xl bg-[#FAF5FB] border border-[#EADBEE]">
+            <h4 class="font-brand-serif text-xl font-bold text-[#2E2A38] mb-4">Sala de Ventas en Uchumayo</h4>
+            
+            <div class="space-y-4 text-xs sm:text-sm text-[#2E2A38]/90">
+              <div class="flex items-start gap-3">
+                <i data-lucide="map-pin" class="w-5 h-5 text-[#7B1FA2] flex-shrink-0 mt-0.5"></i>
+                <span>Carretera Variante de Uchumayo, Arequipa (5 min antes del Peaje de Uchumayo).</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <i data-lucide="phone" class="w-5 h-5 text-[#7B1FA2] flex-shrink-0"></i>
+                <span>+51 937 289 887</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <i data-lucide="clock" class="w-5 h-5 text-[#7B1FA2] flex-shrink-0"></i>
+                <span>Atención: Lunes a Domingo de 9:00 am a 6:00 pm.</span>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-[#EADBEE]">
+              <a href="https://api.whatsapp.com/send?phone=51937289887&text=Hola%20Biosfera,%20deseo%20visitar%20el%20terreno%20de%20La%20Morada" 
+                 target="_blank"
+                 class="w-full py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-md">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Escribir por WhatsApp ahora</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-morada bg-white border border-[#EADBEE]">
+            <h5 class="font-bold text-xs text-[#7B1FA2] uppercase tracking-wider mb-2">Transporte a Obra</h5>
+            <p class="text-xs text-[#2E2A38]/80 leading-relaxed">
+              Coordinamos salidas semanales desde Arequipa para clientes interesados en conocer el condominio y el Club Privado. Consúltanos disponibilidad de movilidad guiada.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#FAF5FB] border-t border-[#EADBEE] text-[#2E2A38] pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="space-y-4">
+        <span class="font-brand-serif font-bold text-xl text-[#7B1FA2]">La Morada — Viviendas Club</span>
+        <p class="text-xs text-[#2E2A38]/80">Habilitación urbana de 7.5 Has. en Variante de Uchumayo, Arequipa.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs text-[#7B1FA2] uppercase mb-4">Páginas</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-[#7B1FA2]">Inicio</a></li>
+          <li><a href="proyecto.html" class="hover:text-[#7B1FA2]">El Proyecto & Garantías</a></li>
+          <li><a href="amenidades.html" class="hover:text-[#7B1FA2]">Amenidades & Club Alegra</a></li>
+          <li><a href="ubicacion.html" class="hover:text-[#7B1FA2]">Ubicación</a></li>
+          <li><a href="lotes.html" class="hover:text-[#7B1FA2]">Lotes & Simulador</a></li>
+          <li><a href="contacto.html" class="text-[#7B1FA2] font-semibold">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs text-[#7B1FA2] uppercase mb-4">Ubicación</h4>
+        <p class="text-xs text-[#2E2A38]/80">Carretera Variante de Uchumayo, Arequipa.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs text-[#7B1FA2] uppercase mb-4">Desarrollador</h4>
+        <p class="text-xs text-[#2E2A38]/80">BIOSFERA DESARROLLO INMOBILIARIO S.A.C.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lotes en Preventa & Simulador de Crédito | La Morada — Viviendas Club</title>
+  <meta name="description" content="Elige tu lote en La Morada Viviendas Club (Uchumayo). 165 lotes desde 200m2. Simulador de crédito directo hasta 48 meses sin intereses y descuento al contado.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-morada-hueso text-[#2E2A38] antialiased">
+  <div class="page-transition-overlay"></div>
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-header py-3.5 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <img src="assets/logo-la-morada.png" alt="La Morada Viviendas Club" class="h-14 sm:h-16 w-auto object-contain transition-transform group-hover:scale-105">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-[13.5px] font-medium text-[#2E2A38]">
+        <a href="index.html" class="hover:text-[#7B1FA2] transition-colors">Inicio</a>
+        <a href="proyecto.html" class="hover:text-[#7B1FA2] transition-colors">El Proyecto</a>
+        <a href="amenidades.html" class="hover:text-[#7B1FA2] transition-colors">Amenidades & Club</a>
+        <a href="ubicacion.html" class="hover:text-[#7B1FA2] transition-colors">Ubicación</a>
+        <a href="lotes.html" class="text-[#7B1FA2] font-bold border-b-2 border-[#7B1FA2] pb-0.5">Lotes & Masterplan</a>
+        <a href="contacto.html" class="hover:text-[#7B1FA2] transition-colors">Contacto</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://api.whatsapp.com/send?phone=51937289887&text=Hola%20Biosfera,%20deseo%20cotizar%20un%20lote%20en%20La%20Morada" target="_blank"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold hover:bg-emerald-100">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-emerald-600"></i>
+          <span>Cotizar Lote</span>
+        </a>
+        <a href="contacto.html" class="btn-primary-morada px-5 py-2.5 text-xs font-semibold">Agendar Visita</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl bg-purple-50 text-[#7B1FA2]">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- BANNER TITULAR -->
+  <section class="pt-36 pb-16 bg-morada-suave border-b border-[#EADBEE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <span class="text-[#7B1FA2] text-xs font-bold uppercase tracking-submarca">Masterplan & Financiamiento Directo</span>
+      <h1 class="font-brand-serif text-3xl sm:text-5xl font-bold text-[#2E2A38] mt-2">
+        ¡Elige tu Lote en Preventa!
+      </h1>
+      <p class="text-[#2E2A38]/80 text-sm sm:text-base mt-3 leading-relaxed">
+        165 lotes urbanizados sobre 7.5 Hectáreas. Separa con <strong>S/ 300 o $300</strong> por 5 días calendario y aprovecha el crédito directo de hasta 48 meses sin intereses.
+      </p>
+    </div>
+  </section>
+
+  <!-- SELECCIONADOR DE LOTES (PLANO MAESTRO CLARO) -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-morada-hueso p-6 sm:p-10 rounded-morada-xl border border-[#EADBEE] shadow-sm">
+        
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#EADBEE]">
+          <div class="flex items-center gap-6 text-xs font-semibold">
+            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-emerald-500"></span> Disponible</span>
+            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-amber-500"></span> Reservado</span>
+            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-slate-400"></span> Vendido</span>
+          </div>
+          <span class="text-xs text-[#7B1FA2] font-semibold">Haz clic en un lote para seleccionarlo</span>
+        </div>
+
+        <!-- Muestra interactiva de lotes con fondo claro -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 mt-8">
+          
+          <div class="lot-item-card p-4 rounded-morada bg-white border border-emerald-400 text-center cursor-pointer transition-all hover:shadow-md animate-float hover-rotate delay-300" data-lot="Lote Mz A-01" data-m2="200">
+            <span class="text-[10px] text-emerald-700 font-bold block mb-1">DISPONIBLE</span>
+            <span class="font-brand-serif font-bold text-base text-[#2E2A38] block">Mz A - Lote 01</span>
+            <span class="text-xs text-[#2E2A38]/70 block mt-1">200 m² &bull; Vista Parque</span>
+          </div>
+
+          <div class="lot-item-card p-4 rounded-morada bg-white border border-emerald-400 text-center cursor-pointer transition-all hover:shadow-md" data-lot="Lote Mz A-02" data-m2="200">
+            <span class="text-[10px] text-emerald-700 font-bold block mb-1">DISPONIBLE</span>
+            <span class="font-brand-serif font-bold text-base text-[#2E2A38] block">Mz A - Lote 02</span>
+            <span class="text-xs text-[#2E2A38]/70 block mt-1">200 m² &bull; Regular</span>
+          </div>
+
+          <div class="lot-item-card p-4 rounded-morada bg-white border border-amber-300 text-center cursor-not-allowed opacity-80" data-lot="Lote Mz A-03" data-m2="220">
+            <span class="text-[10px] text-amber-700 font-bold block mb-1">RESERVADO</span>
+            <span class="font-brand-serif font-bold text-base text-slate-600 block">Mz A - Lote 03</span>
+            <span class="text-xs text-slate-500 block mt-1">220 m² &bull; Regular</span>
+          </div>
+
+          <div class="lot-item-card p-4 rounded-morada bg-white border border-emerald-400 text-center cursor-pointer transition-all hover:shadow-md" data-lot="Lote Mz B-01" data-m2="250">
+            <span class="text-[10px] text-emerald-700 font-bold block mb-1">DISPONIBLE</span>
+            <span class="font-brand-serif font-bold text-base text-[#2E2A38] block">Mz B - Lote 01</span>
+            <span class="text-xs text-[#2E2A38]/70 block mt-1">250 m² &bull; Esquina</span>
+          </div>
+
+          <div class="lot-item-card p-4 rounded-morada bg-slate-100 border border-slate-200 text-center cursor-not-allowed opacity-60" data-lot="Lote Mz B-02" data-m2="200">
+            <span class="text-[10px] text-slate-600 font-bold block mb-1">VENDIDO</span>
+            <span class="font-brand-serif font-bold text-base text-slate-500 block">Mz B - Lote 02</span>
+            <span class="text-xs text-slate-400 block mt-1">200 m²</span>
+          </div>
+
+          <div class="lot-item-card p-4 rounded-morada bg-white border border-emerald-400 text-center cursor-pointer transition-all hover:shadow-md" data-lot="Lote Mz B-03" data-m2="200">
+            <span class="text-[10px] text-emerald-700 font-bold block mb-1">DISPONIBLE</span>
+            <span class="font-brand-serif font-bold text-base text-[#2E2A38] block">Mz B - Lote 03</span>
+            <span class="text-xs text-[#2E2A38]/70 block mt-1">200 m² &bull; Regular</span>
+          </div>
+
+        </div>
+
+        <div id="selected-lot-label" class="mt-8 text-xs sm:text-sm text-[#7B1FA2] text-center py-3 px-5 rounded-morada bg-purple-50 border border-purple-200 font-medium">
+          Haz clic en cualquier lote disponible para pre-seleccionarlo y cotizarlo directamente.
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SIMULADOR FINANCIERO -->
+  <section class="py-20 bg-morada-suave border-t border-[#EADBEE]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="text-[#7B1FA2] text-xs font-bold uppercase tracking-submarca">Simulador Oficial</span>
+        <h2 class="font-brand-serif text-3xl font-bold text-[#2E2A38] mt-1">Calcula tu Inversión</h2>
+        <p class="text-[#2E2A38]/80 text-xs sm:text-sm mt-2">
+          Financiamiento directo con Biosfera Inmobiliaria sin calificación bancaria ni intereses.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 sm:p-12 rounded-morada-xl border border-[#EADBEE] shadow-sm grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="space-y-5">
+          <div>
+            <label for="lot-area" class="block text-xs font-bold text-[#7B1FA2] uppercase mb-2">Área del Lote:</label>
+            <select id="lot-area" class="w-full bg-[#FAF5FB] border border-[#EADBEE] rounded-morada px-4 py-3 text-sm text-[#2E2A38] focus:outline-none focus:border-[#7B1FA2]">
+              <option value="200" selected>Lote Estándar (200 m²)</option>
+              <option value="250">Lote Mediano (250 m²)</option>
+              <option value="300">Lote Campestre Amplio (300 m²)</option>
+              <option value="350">Lote Premium de Esquina (350 m²)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="payment-plan" class="block text-xs font-bold text-[#7B1FA2] uppercase mb-2">Modalidad de Pago:</label>
+            <select id="payment-plan" class="w-full bg-[#FAF5FB] border border-[#EADBEE] rounded-morada px-4 py-3 text-sm text-[#2E2A38] focus:outline-none focus:border-[#7B1FA2]">
+              <option value="contado">Pago al Contado (Descuento US$ 5,000)</option>
+              <option value="12">12 Meses Sin Intereses</option>
+              <option value="24">24 Meses Sin Intereses</option>
+              <option value="36" selected>36 Meses Sin Intereses (Plan Estándar)</option>
+              <option value="48">48 Meses Sin Intereses (Máximo)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="initial-percent" class="block text-xs font-bold text-[#7B1FA2] uppercase mb-2">Porcentaje de Inicial:</label>
+            <select id="initial-percent" class="w-full bg-[#FAF5FB] border border-[#EADBEE] rounded-morada px-4 py-3 text-sm text-[#2E2A38] focus:outline-none focus:border-[#7B1FA2]">
+              <option value="0.30">30% Inicial (Mínimo requerido)</option>
+              <option value="0.50" selected>50% Inicial (Recomendado)</option>
+              <option value="0.70">70% Inicial (Posesión Inmediata de Terreno)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bg-[#FAF5FB] rounded-morada-lg p-7 border border-[#EADBEE] flex flex-col justify-between">
+          <div>
+            <span class="text-xs uppercase tracking-wider text-[#7B1FA2] font-bold block mb-3">Resumen de Cotización</span>
+            
+            <div id="calc-discount-alert" class="hidden mb-4 p-3 rounded-morada bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-medium">
+              ¡Aplica descuento especial de <strong>USD $5,000</strong> por pago al contado!
+            </div>
+
+            <div class="space-y-3 mt-2 text-sm">
+              <div class="flex justify-between items-center pb-2 border-b border-[#EADBEE]">
+                <span class="text-[#2E2A38]/70">Precio Total Estimado:</span>
+                <span id="calc-total" class="font-bold text-[#2E2A38] text-base">US$ 48,000</span>
+              </div>
+
+              <div class="flex justify-between items-center pb-2 border-b border-[#EADBEE]">
+                <span class="text-[#2E2A38]/70">Inicial Sugerida:</span>
+                <span id="calc-initial" class="font-bold text-[#7B1FA2] text-base">US$ 24,000</span>
+              </div>
+
+              <div class="flex justify-between items-center pt-2">
+                <span class="text-[#2E2A38]/70">Cuota Mensual:</span>
+                <span id="calc-quota" class="font-extrabold text-emerald-700 text-lg">US$ 667 / mes</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[#EADBEE]">
+            <a href="contacto.html" class="btn-primary-morada w-full py-3 text-center text-xs block font-semibold">
+              Solicitar Cotización Formal
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#FAF5FB] border-t border-[#EADBEE] text-[#2E2A38] pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="space-y-4">
+        <span class="font-brand-serif font-bold text-xl text-[#7B1FA2]">La Morada — Viviendas Club</span>
+        <p class="text-xs text-[#2E2A38]/80">Habilitación urbana de 7.5 Has. en Variante de Uchumayo, Arequipa.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs text-[#7B1FA2] uppercase mb-4">Páginas</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-[#7B1FA2]">Inicio</a></li>
+          <li><a href="proyecto.html" class="hover:text-[#7B1FA2]">El Proyecto & Garantías</a></li>
+          <li><a href="amenidades.html" class="hover:text-[#7B1FA2]">Amenidades & Club Alegra</a></li>
+          <li><a href="ubicacion.html" class="hover:text-[#7B1FA2]">Ubicación</a></li>
+          <li><a href="lotes.html" class="text-[#7B1FA2] font-semibold">Lotes & Simulador</a></li>
+          <li><a href="contacto.html" class="hover:text-[#7B1FA2]">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs text-[#7B1FA2] uppercase mb-4">Ubicación</h4>
+        <p class="text-xs text-[#2E2A38]/80">Carretera Variante de Uchumayo, Arequipa.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs text-[#7B1FA2] uppercase mb-4">Desarrollador</h4>
+        <p class="text-xs text-[#2E2A38]/80">BIOSFERA DESARROLLO INMOBILIARIO S.A.C.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

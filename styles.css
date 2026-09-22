@@ -1,0 +1,303 @@
+/* 
+ * MANUAL DE IDENTIDAD VISUAL CORPORATIVA - LA MORADA VIVIENDAS CLUB
+ * BIOSFERA INMOBILIARIA · AREQUIPA
+ * 
+ * PALETA OFICIAL:
+ * Morado Primario: #7B1FA2
+ * Violeta Vívido:   #6A1B9A
+ * Lila Acento:      #AB47BC
+ * Grafito (Texto):  #2E2A38
+ * Blanco Hueso:     #FBF8F5
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap');
+
+:root {
+  --color-morado-primario: #7B1FA2;
+  --color-violeta-vivido: #6A1B9A;
+  --color-lila-acento: #AB47BC;
+  --color-grafito: #2E2A38;
+  --color-blanco-hueso: #FBF8F5;
+  
+  /* Tonos derivados suaves para fondos claros */
+  --bg-suave-1: #FAF5FB;
+  --bg-suave-2: #F5ECF8;
+  --border-suave: #EADBEE;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--color-grafito);
+  background-color: var(--color-blanco-hueso);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Tipografía de Marca Primaria: Serif de Alto Contraste */
+.font-brand-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* Tipografía de Marca Secundaria: Palo Seco Geométrica */
+.font-brand-sans {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.tracking-submarca {
+  letter-spacing: 0.22em;
+}
+
+/* Degradados Suaves Oficiales sobre Fondos Claros */
+.bg-morada-hueso {
+  background-color: var(--color-blanco-hueso);
+}
+
+.bg-morada-suave {
+  background: linear-gradient(180deg, #FBF8F5 0%, #F5ECF8 100%);
+}
+
+.bg-gradient-morado-light {
+  background: linear-gradient(135deg, rgba(123, 31, 162, 0.05) 0%, rgba(171, 71, 188, 0.08) 100%);
+}
+
+.bg-gradient-header {
+  background: rgba(251, 248, 245, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-suave);
+}
+
+.bg-gradient-banner-morado {
+  background: linear-gradient(135deg, #7B1FA2 0%, #6A1B9A 60%, #4A0E70 100%);
+}
+
+.bg-gradient-card-light {
+  background: #FFFFFF;
+  border: 1px solid var(--border-suave);
+  box-shadow: 0 4px 20px -2px rgba(106, 27, 154, 0.04);
+}
+
+/* Bordes Redondeados Amplios y Amables */
+.rounded-morada-sm {
+  border-radius: 0.875rem; /* 14px */
+}
+.rounded-morada {
+  border-radius: 1.25rem; /* 20px */
+}
+.rounded-morada-lg {
+  border-radius: 1.75rem; /* 28px */
+}
+.rounded-morada-xl {
+  border-radius: 2.25rem; /* 36px */
+}
+
+/* Tarjetas de Amenidades / Beneficios */
+.amenity-card-light {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-suave);
+  border-radius: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.amenity-card-light:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-lila-acento);
+  box-shadow: 0 16px 32px -4px rgba(106, 27, 154, 0.09);
+}
+
+/* Botones con estilo corporativo suave */
+.btn-primary-morada {
+  background: linear-gradient(135deg, #7B1FA2 0%, #6A1B9A 100%);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px -2px rgba(123, 31, 162, 0.3);
+}
+
+.btn-primary-morada:hover {
+  background: linear-gradient(135deg, #8E24AA 0%, #7B1FA2 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -2px rgba(123, 31, 162, 0.42);
+}
+
+.btn-secondary-morada {
+  background-color: #FFFFFF;
+  color: var(--color-morado-primario);
+  border: 1.5px solid var(--color-morado-primario);
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary-morada:hover {
+  background-color: var(--bg-suave-2);
+  transform: translateY(-2px);
+}
+
+/* Scrollbar refinado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FBF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #AB47BC;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7B1FA2;
+}
+
+/* Transición Suave entre Páginas */
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-blanco-hueso);
+  z-index: 99999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-transition-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Animaciones de Entrada (Scroll Reveal) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(123, 31, 162, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px 6px rgba(123, 31, 162, 0.15);
+  }
+}
+
+/* Clases utilitarias de animación */
+.animate-fade-in-up {
+  animation: fadeInUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Efectos de Hover Enriquecidos */
+.hover-lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -8px rgba(106, 27, 154, 0.12);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 10px 28px -4px rgba(123, 31, 162, 0.28);
+}
+
+/* Elementos animados por IntersectionObserver */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delays escalonados para grids */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Lote activo en el plano maestro */
+.lote-badge-disponible {
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+}
+.lote-badge-reservado {
+  background: #FFFBEB;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+}
+.lote-badge-vendido {
+  background: #F3F4F6;
+  color: #4B5563;
+  border: 1px solid #E5E7EB;
+}
+
+/* ---- New Animation Keyframes and Utilities ---- */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulseSoft {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.03); opacity: 0.9; }
+}
+@keyframes rotateHover {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(10deg); }
+}
+/* Utility animation classes */
+.animate-slide-in-left { animation: slideInLeft 0.7s ease-out forwards; }
+.animate-slide-in-right { animation: slideInRight 0.7s ease-out forwards; }
+.animate-pulse-soft { animation: pulseSoft 2s ease-in-out infinite; }
+.hover-rotate:hover { animation: rotateHover 0.4s forwards; }
+.btn-anim { animation: pulseSoft 2s ease-in-out infinite; transition: transform 0.25s; }
+.btn-anim:hover { transform: scale(1.05); }
+.input-anim:focus { animation: pulseSoft 1.5s ease-in-out infinite; outline: none; }

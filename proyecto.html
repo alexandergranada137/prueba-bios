@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Proyecto & Respaldo Legal | La Morada — Viviendas Club</title>
+  <meta name="description" content="Información técnica, legal y de infraestructura del Condominio La Morada en Uchumayo, Arequipa. Biosfera Desarrollo Inmobiliario S.A.C.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-morada-hueso text-[#2E2A38] antialiased">
+  <div class="page-transition-overlay"></div>
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-header py-3.5 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <img src="assets/logo-la-morada.png" alt="La Morada Viviendas Club" class="h-14 sm:h-16 w-auto object-contain transition-transform group-hover:scale-105">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-[13.5px] font-medium text-[#2E2A38]">
+        <a href="index.html" class="hover:text-[#7B1FA2] transition-colors">Inicio</a>
+        <a href="proyecto.html" class="text-[#7B1FA2] font-bold border-b-2 border-[#7B1FA2] pb-0.5">El Proyecto</a>
+        <a href="amenidades.html" class="hover:text-[#7B1FA2] transition-colors">Amenidades & Club</a>
+        <a href="ubicacion.html" class="hover:text-[#7B1FA2] transition-colors">Ubicación</a>
+        <a href="lotes.html" class="hover:text-[#7B1FA2] transition-colors">Lotes & Masterplan</a>
+        <a href="contacto.html" class="hover:text-[#7B1FA2] transition-colors">Contacto</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://api.whatsapp.com/send?phone=51966030329&text=Hola%20Biosfera%20Inmobiliaria,%20deseo%20informaci%C3%B3n%20de%20La%20Morada%20Viviendas%20Club" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold hover:bg-emerald-100">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-emerald-600"></i>
+          <span>966030329</span>
+        </a>
+        <a href="contacto.html" class="btn-primary-morada px-5 py-2.5 text-xs font-semibold btn-anim delay-200">Agendar Visita</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl bg-purple-50 text-[#7B1FA2]">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- DRAWER MÓVIL -->
+  <div id="drawer-overlay" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#FBF8F5] z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 border-l border-[#EADBEE]">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-[#EADBEE]">
+        <span class="font-brand-serif font-bold text-lg text-[#7B1FA2]">La Morada</span>
+        <button id="close-menu-btn" class="p-2"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <nav class="flex flex-col gap-4 mt-6 text-sm font-medium">
+        <a href="index.html" class="py-1">Inicio</a>
+        <a href="proyecto.html" class="py-1 text-[#7B1FA2] font-semibold">El Proyecto & Garantías</a>
+        <a href="amenidades.html" class="py-1">Amenidades & Club Alegra</a>
+        <a href="ubicacion.html" class="py-1">Ubicación Estratégica</a>
+        <a href="lotes.html" class="py-1">Lotes & Masterplan</a>
+        <a href="contacto.html" class="py-1">Contacto & Sala de Ventas</a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- BANNER TITULAR CLARO -->
+  <section class="pt-36 pb-16 bg-morada-suave border-b border-[#EADBEE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <span class="text-[#7B1FA2] text-xs font-bold uppercase tracking-submarca">Transparencia & Rigor Profesional</span>
+      <h1 class="font-brand-serif text-3xl sm:text-5xl font-bold text-[#2E2A38] mt-2 animate-slide-in-left delay-100">
+        El Proyecto & Solvencia Jurídica
+      </h1>
+      <p class="text-[#2E2A38]/80 text-sm sm:text-base mt-3 leading-relaxed">
+        Descubre los fundamentos técnicos, la documentación legal notarial y el plan maestro de desarrollo urbano que consolidan a Condominio La Morada como una inversión patrimonial de alta plusvalía.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO: INFORMACIÓN GENERAL -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+        <div class="p-6 rounded-morada bg-[#FAF5FB] border border-[#EADBEE] text-center">
+          <span class="text-xs font-bold text-[#7B1FA2] uppercase">Tipo de Proyecto</span>
+          <h4 class="font-brand-serif text-xl font-bold text-[#2E2A38] mt-1">Habilitación Urbana</h4>
+          <p class="text-xs text-[#2E2A38]/70 mt-1">Segunda vivienda residencial campestre</p>
+        </div>
+
+        <div class="p-6 rounded-morada bg-[#FAF5FB] border border-[#EADBEE] text-center">
+          <span class="text-xs font-bold text-[#7B1FA2] uppercase">Área Total</span>
+          <h4 class="font-brand-serif text-xl font-bold text-[#2E2A38] mt-1">7.5 Hectáreas</h4>
+          <p class="text-xs text-[#2E2A38]/70 mt-1">Amplias áreas verdes y club privado</p>
+        </div>
+
+        <div class="p-6 rounded-morada bg-[#FAF5FB] border border-[#EADBEE] text-center">
+          <span class="text-xs font-bold text-[#7B1FA2] uppercase">Cantidad de Lotes</span>
+          <h4 class="font-brand-serif text-xl font-bold text-[#2E2A38] mt-1">165 Lotes</h4>
+          <p class="text-xs text-[#2E2A38]/70 mt-1">Con excelente frontis desde 200 m²</p>
+        </div>
+
+        <div class="p-6 rounded-morada bg-[#FAF5FB] border border-[#EADBEE] text-center">
+          <span class="text-xs font-bold text-[#7B1FA2] uppercase">Tiempo de Desarrollo</span>
+          <h4 class="font-brand-serif text-xl font-bold text-[#2E2A38] mt-1">5 Años</h4>
+          <p class="text-xs text-[#2E2A38]/70 mt-1">Avance por etapas planificadas</p>
+        </div>
+      </div>
+
+      <!-- SECCIÓN DOCUMENTACIÓN LEGAL DETALLADA -->
+      <div class="bg-morada-hueso rounded-morada-xl p-8 sm:p-12 border border-[#EADBEE] shadow-sm">
+        <div class="max-w-3xl mb-8">
+          <span class="text-[#7B1FA2] text-xs font-bold uppercase tracking-submarca">Seguridad Contractual</span>
+          <h2 class="font-brand-serif text-2xl sm:text-3xl font-bold text-[#2E2A38] mt-1">
+            Documentación y Etapas de Formalización
+          </h2>
+          <p class="text-[#2E2A38]/80 text-sm mt-2">
+            La Morada cumple con cada hito normativo y notarial para garantizar una adquisición transparente:
+          </p>
+        </div>
+
+        <div class="space-y-4 text-sm text-[#2E2A38]/90">
+          <div class="flex items-start gap-3.5 p-4 rounded-morada bg-white border border-[#EADBEE]">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[#7B1FA2] flex-shrink-0 mt-0.5"></i>
+            <div>
+              <strong>Adquisición de Lote en la Actualidad:</strong> Se firma un <em>Contrato de Compraventa de Bien Inmueble Futuro</em>, legalizado ante Notario Público (Notaría Morote Valenza).
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5 p-4 rounded-morada bg-white border border-[#EADBEE]">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[#7B1FA2] flex-shrink-0 mt-0.5"></i>
+            <div>
+              <strong>Separación Formal:</strong> Se suscribe una Proforma de Separación formal con abono desde $300 o S/ 1,000 (mínimo S/ 300) con vigencia de 5 días calendario.
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5 p-4 rounded-morada bg-white border border-[#EADBEE]">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[#7B1FA2] flex-shrink-0 mt-0.5"></i>
+            <div>
+              <strong>Entrega Final y Partida Independizada:</strong> Para la entrega final del proyecto, cada propietario recibirá la <em>Partida Registral Independizada</em> de su respectivo lote.
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5 p-4 rounded-morada bg-white border border-[#EADBEE]">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[#7B1FA2] flex-shrink-0 mt-0.5"></i>
+            <div>
+              <strong>Posesión Inmediata al 70%:</strong> El cliente puede tomar posesión de su terreno una vez que haya cancelado o pagado más del 70% del precio total convenido.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INFRAESTRUCTURA Y SERVICIOS BÁSICOS -->
+  <section class="py-20 bg-morada-suave border-t border-[#EADBEE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-[#7B1FA2] text-xs font-bold uppercase tracking-submarca">Obras Civiles Garantizadas</span>
+        <h2 class="font-brand-serif text-3xl sm:text-4xl font-bold text-[#2E2A38] mt-1">Infraestructura y Servicios en Campo</h2>
+        <p class="text-[#2E2A38]/75 text-sm mt-2">Condominio La Morada se entrega con servicios básicos activos e integrados:</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="bg-white p-7 rounded-morada-lg border border-[#EADBEE] shadow-sm flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-purple-50 text-[#7B1FA2] flex items-center justify-center flex-shrink-0">
+            <i data-lucide="droplet" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-base text-[#2E2A38]">Red de Agua Potable & Reservorio</h4>
+            <p class="text-xs sm:text-sm text-[#2E2A38]/80 mt-1 leading-relaxed">
+              En todas las calles, con reservorio propio ubicado al ingreso. El agua en Uchumayo se administra municipalmente mediante una JASS (Junta de Administradores de Servicios de Saneamiento). Ya contamos con un punto de agua potable existente en el proyecto.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-7 rounded-morada-lg border border-[#EADBEE] shadow-sm flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-purple-50 text-[#7B1FA2] flex items-center justify-center flex-shrink-0">
+            <i data-lucide="sun" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-base text-[#2E2A38]">Red de Luz Subterránea & Alumbrado Solar</h4>
+            <p class="text-xs sm:text-sm text-[#2E2A38]/80 mt-1 leading-relaxed">
+              Cableado eléctrico subterráneo que preserva la estética visual y la vista al cielo y montañas. Complementado con alumbrado de paneles solares y mixto. Actualmente contamos con punto de luz habilitado.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-7 rounded-morada-lg border border-[#EADBEE] shadow-sm flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-purple-50 text-[#7B1FA2] flex items-center justify-center flex-shrink-0">
+            <i data-lucide="leaf" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-base text-[#2E2A38]">Red de Desagüe & Planta PETAR</h4>
+            <p class="text-xs sm:text-sm text-[#2E2A38]/80 mt-1 leading-relaxed">
+              Sistema de drenaje y alcantarillado en todas las manzanas conectado a una PETAR subterránea ubicada en la cota más baja del proyecto, garantizando sostenibilidad y cero olores.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-7 rounded-morada-lg border border-[#EADBEE] shadow-sm flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-purple-50 text-[#7B1FA2] flex items-center justify-center flex-shrink-0">
+            <i data-lucide="layers" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-base text-[#2E2A38]">Vías con Confitillo & Piedra Emboquillada</h4>
+            <p class="text-xs sm:text-sm text-[#2E2A38]/80 mt-1 leading-relaxed">
+              Pistas compactadas con confitillo y veredas de piedra emboquillada perfilada o concreto, diseñadas para resistir el tránsito y armonizar con la estética campestre del condominio.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NORMAS DE CONSTRUCCIÓN -->
+  <section class="py-16 bg-white border-t border-[#EADBEE]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="p-8 rounded-morada-xl bg-[#FAF5FB] border border-[#EADBEE]">
+        <h3 class="font-brand-serif text-2xl font-bold text-[#2E2A38]">Reglamento Interno de Construcción</h3>
+        <p class="text-[#2E2A38]/80 text-xs sm:text-sm mt-3 leading-relaxed max-w-2xl mx-auto">
+          Para resguardar el valor y la armonía arquitectónica, se establece una construcción máxima de <strong>2 pisos más terraza</strong>, con cerco vivo exterior. Los diseños deben alinearse a los modelos tipificados por la empresa.
+        </p>
+        <div class="mt-6 flex justify-center gap-4">
+          <a href="contacto.html" class="btn-primary-morada px-7 py-3 text-xs">Solicitar Reglamento Completo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#FAF5FB] border-t border-[#EADBEE] text-[#2E2A38] pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="space-y-4">
+        <span class="font-brand-serif font-bold text-xl text-[#7B1FA2]">La Morada — Viviendas Club</span>
+        <p class="text-xs text-[#2E2A38]/80">Habilitación urbana de 7.5 Has. en Variante de Uchumayo, Arequipa.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs text-[#7B1FA2] uppercase mb-4">Páginas</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-[#7B1FA2]">Inicio</a></li>
+          <li><a href="proyecto.html" class="text-[#7B1FA2] font-semibold">El Proyecto & Garantías</a></li>
+          <li><a href="amenidades.html" class="hover:text-[#7B1FA2]">Amenidades & Club Alegra</a></li>
+          <li><a href="ubicacion.html" class="hover:text-[#7B1FA2]">Ubicación</a></li>
+          <li><a href="lotes.html" class="hover:text-[#7B1FA2]">Lotes & Simulador</a></li>
+          <li><a href="contacto.html" class="hover:text-[#7B1FA2]">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs text-[#7B1FA2] uppercase mb-4">Ubicación</h4>
+        <p class="text-xs text-[#2E2A38]/80">Carretera Variante de Uchumayo, Arequipa. (5 min antes del Peaje).</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs text-[#7B1FA2] uppercase mb-4">Desarrollador</h4>
+        <p class="text-xs text-[#2E2A38]/80">BIOSFERA DESARROLLO INMOBILIARIO SAC · Notaría Morote Valenza</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
